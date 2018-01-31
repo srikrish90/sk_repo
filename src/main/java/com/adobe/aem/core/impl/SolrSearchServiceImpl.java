@@ -47,13 +47,7 @@ public class SolrSearchServiceImpl implements SolrSearchService {
 	@Reference
 	SolrServerConfiguration solrConfigurationService;
 
-	/**
-	 * This method takes path and type of resource to perform search in JCR
-	 * 
-	 * @param resourcePath
-	 * @param resourceType
-	 * @return JSONArray with resources metadata
-	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public JSONArray crawlContent(String resourcePath, String resourceType) {
 
@@ -85,14 +79,6 @@ public class SolrSearchServiceImpl implements SolrSearchService {
 
 	}
 
-	/**
-	 * This method takes search result of content pages and creates a JSON array
-	 * object with properties
-	 * 
-	 * @param results
-	 * @return
-	 * @throws RepositoryException
-	 */
 	@Override
 	public JSONArray createPageMetadataArray(SearchResult results) throws RepositoryException {
 		JSONArray solrDocs = new JSONArray();
@@ -110,15 +96,6 @@ public class SolrSearchServiceImpl implements SolrSearchService {
 
 	}
 
-	/**
-	 * This method creates JSONObject which has all the page metadata which is
-	 * used to index in Solr server
-	 * 
-	 * @param It
-	 *            takes resource of type cq:PageContent to extract the page
-	 *            metadata
-	 * @return Json object with page's metadata
-	 */
 	@Override
 	public JSONObject createPageMetadataObject(Resource pageContent) {
 		Map<String, Object> propertiesMap = new HashMap<String, Object>();
@@ -139,15 +116,6 @@ public class SolrSearchServiceImpl implements SolrSearchService {
 		return new JSONObject(propertiesMap);
 	}
 
-	/**
-	 * This method connects to the Solr server and indexes page content using
-	 * Solrj api. This is used by bulk update handler (servlet)
-	 * 
-	 * @param Takes
-	 *            Json array and iterates over each object and index to solr
-	 * @return boolean true if it indexes successfully to solr server, else
-	 *         false.
-	 */
 	@Override
 	public boolean indexPagesToSolr(JSONArray indexPageData, HttpSolrClient server)
 			throws JSONException, SolrServerException, IOException {
@@ -165,15 +133,6 @@ public class SolrSearchServiceImpl implements SolrSearchService {
 		return false;
 	}
 
-	/**
-	 * This method connects to the Solr server and indexes page content using
-	 * Solrj api. This is used by transport handler
-	 * 
-	 * @param Takes
-	 *            Json object and index to solr
-	 * @return boolean true if it indexes successfully to solr server, else
-	 *         false.
-	 */
 	@Override
 	public boolean indexPageToSolr(JSONObject indexPageData, HttpSolrClient server)
 			throws JSONException, SolrServerException, IOException {
