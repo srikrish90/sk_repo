@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: com.adobe.aem.core.impl.SolrServerConfigTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.183 sec <<< FAILURE! - in com.adobe.aem.core.impl.SolrServerConfigTest
+testGetSolrProtocol(com.adobe.aem.core.impl.SolrServerConfigTest)  Time elapsed: 0.177 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.adobe.aem.core.impl.SolrServerConfigImpl.activate(SolrServerConfigImpl.java:50)
+	at com.adobe.aem.core.impl.SolrServerConfigTest.testGetSolrProtocol(SolrServerConfigTest.java:55)
+
+testGetContentPagePath(com.adobe.aem.core.impl.SolrServerConfigTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.adobe.aem.core.impl.SolrServerConfigImpl.activate(SolrServerConfigImpl.java:50)
+	at com.adobe.aem.core.impl.SolrServerConfigTest.testGetContentPagePath(SolrServerConfigTest.java:64)
+
+testGetSolrCoreName(com.adobe.aem.core.impl.SolrServerConfigTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.adobe.aem.core.impl.SolrServerConfigImpl.activate(SolrServerConfigImpl.java:50)
+	at com.adobe.aem.core.impl.SolrServerConfigTest.testGetSolrCoreName(SolrServerConfigTest.java:73)
+
+testGetSolrServerName(com.adobe.aem.core.impl.SolrServerConfigTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.adobe.aem.core.impl.SolrServerConfigImpl.activate(SolrServerConfigImpl.java:50)
+	at com.adobe.aem.core.impl.SolrServerConfigTest.testGetSolrServerName(SolrServerConfigTest.java:82)
+
+testGetSolrServerPort(com.adobe.aem.core.impl.SolrServerConfigTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.adobe.aem.core.impl.SolrServerConfigImpl.activate(SolrServerConfigImpl.java:50)
+	at com.adobe.aem.core.impl.SolrServerConfigTest.testGetSolrServerPort(SolrServerConfigTest.java:91)
+

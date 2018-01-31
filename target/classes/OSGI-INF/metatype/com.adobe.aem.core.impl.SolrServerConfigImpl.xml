@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.adobe.aem.core.impl.SolrServerConfigImpl">
+    <OCD id="com.adobe.aem.core.impl.SolrServerConfigImpl" name="%com.adobe.aem.core.impl.SolrServerConfigImpl.name" description="%com.adobe.aem.core.impl.SolrServerConfigImpl.description">
+        <AD id="solr.protocol" type="String" default="http" name="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.protocol.name" description="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.protocol.description"/>
+        <AD id="solr.server.name" type="String" default="localhost" name="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.server.name.name" description="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.server.name.description"/>
+        <AD id="solr.server.port" type="String" default="8983" name="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.server.port.name" description="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.server.port.description"/>
+        <AD id="solr.core.name" type="String" default="collection1" name="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.core.name.name" description="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.core.name.description"/>
+        <AD id="solr.core.pagepath" type="String" default="/content/solr" name="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.core.pagepath.name" description="%com.adobe.aem.core.impl.SolrServerConfigImpl.solr.core.pagepath.description"/>
+    </OCD>
+    <Designate pid="com.adobe.aem.core.impl.SolrServerConfigImpl">
+        <Object ocdref="com.adobe.aem.core.impl.SolrServerConfigImpl"/>
+    </Designate>
+</metatype:MetaData>

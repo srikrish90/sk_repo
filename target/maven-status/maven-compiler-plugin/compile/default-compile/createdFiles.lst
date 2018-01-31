@@ -1,0 +1,4 @@
+com\adobe\aem\core\package-info.class
+com\adobe\aem\core\impl\SolrServerConfigImpl.class
+com\adobe\aem\core\SolrSearchService.class
+com\adobe\aem\core\SolrServerConfiguration.class

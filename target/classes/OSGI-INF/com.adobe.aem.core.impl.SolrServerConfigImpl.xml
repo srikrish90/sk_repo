@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="com.adobe.aem.core.impl.SolrServerConfigImpl" activate="activate">
+        <implementation class="com.adobe.aem.core.impl.SolrServerConfigImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.aem.core.SolrServerConfiguration"/>
+        </service>
+        <property name="solr.protocol" value="http"/>
+        <property name="solr.server.name" value="localhost"/>
+        <property name="solr.server.port" value="8983"/>
+        <property name="solr.core.name" value="collection1"/>
+        <property name="solr.core.pagepath" value="/content/solr"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.adobe.aem.core.impl.SolrServerConfigImpl"/>
+    </scr:component>
+</components>
